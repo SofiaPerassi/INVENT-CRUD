@@ -1,0 +1,24 @@
+<p>
+    <mat-toolbar class="fondo">
+      <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Tipos de paquetes</button>
+          <button mat-menu-item>Administradores/Trabajadores</button>
+          <button mat-menu-item>Envios registrados</button>
+          <button mat-menu-item>Empresas externas</button>
+        </mat-menu>
+      </button> -->
+      <h1 class="title">INVENT</h1>
+      <span class="example-spacer"></span>
+      <mat-icon class="logout" (click)="logout()">logout</mat-icon>
+    </mat-toolbar>
+  </p>
+  
+  <div class="container">
+    <app-paquetes-table></app-paquetes-table>
+    <app-trabajadores-table></app-trabajadores-table>
+  </div>
+  
+  <app-envios-table></app-envios-table>
+  <app-transporte-table></app-transporte-table>

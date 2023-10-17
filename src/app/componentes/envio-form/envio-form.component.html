@@ -1,0 +1,38 @@
+<div class="container">
+    <div mat-dialog-title>
+        <h1>Formulario de envios</h1>
+    </div>
+    <div mat-dialog-content class="form">
+        <form action="" [formGroup]="envioForm" (ngSubmit)="onSubmit()">
+            <div class="second">
+                <mat-form-field appearance="outline">
+                    <mat-label>Direccion de destino</mat-label>
+                    <input matInput formControlName="direccion" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre del destinatario</mat-label>
+                    <input matInput formControlName="destinatario" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre del remitente</mat-label>
+                    <input matInput formControlName="remitente" required>
+                </mat-form-field>
+            </div>
+            <div class="first">
+                <mat-form-field appearance="outline" class="input">
+                    <mat-label>Código postal</mat-label>
+                    <input matInput formControlName="code" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="input">
+                    <mat-label>Peso del envío (kg)</mat-label>
+                    <input matInput formControlName="peso" required>
+                </mat-form-field>
+            </div>
+            <div mat-dialog-actions class="first">
+                <button mat-raised-button type="submit" [disabled]="envioForm.invalid" class="button">Aceptar</button>
+                <button mat-raised-button [mat-dialog-close]="false" class="button">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+

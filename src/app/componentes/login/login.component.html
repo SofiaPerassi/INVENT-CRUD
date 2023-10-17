@@ -1,0 +1,42 @@
+<!-- <div class="container">
+    <h1>Ingresa en INVENT</h1>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Usuario</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input matInput >
+        </mat-form-field>
+    </div>
+    <div>
+        <button>Ingresar</button>
+    </div>
+    <div>
+        <p>Nuevo en INVENT? <a href="">Crea tu cuenta</a></p>
+    </div>
+</div> -->
+
+<div class="container">
+    <div>
+        <h1>Ingresa en INVENT</h1>
+    </div>
+    <div>
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="form">
+                <mat-form-field appearance="outline">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput formControlName="usuario" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput formControlName="contraseña" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button type="submit" [disabled]="userForm.invalid" class="button">Ingresar</button>
+            </div>
+        </form>
+    </div>
+</div>

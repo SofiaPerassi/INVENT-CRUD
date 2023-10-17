@@ -1,0 +1,70 @@
+{
+  "usuarios": [
+    {
+      "nombre": "SofiaPerassi",
+      "email": "sofiaperassi@outlook.com",
+      "contraseña": "INVENT",
+      "id": 1
+    }
+  ],
+  "envios": [
+    {
+      "direccion": "Marques de campo",
+      "code": "46007",
+      "destinatario": "Fiorella",
+      "remitente": "Sofia",
+      "peso": "2.3",
+      "precio": 0,
+      "id": 1
+    },
+    {
+      "direccion": "Paco Pierra",
+      "code": "46013",
+      "destinatario": "Luciana",
+      "remitente": "Sofia",
+      "peso": "0.5",
+      "precio": 5,
+      "id": 2
+    },
+    {
+      "direccion": "Marques de campo",
+      "code": "46007",
+      "destinatario": "Sofia",
+      "remitente": "Julia",
+      "peso": "3",
+      "precio": 30,
+      "empresa": "INVENT",
+      "id": 3
+    },
+    {
+      "direccion": "Chacabuco",
+      "code": "16007",
+      "destinatario": "Gaia",
+      "remitente": "Fiorella",
+      "peso": "8",
+      "precio": "40875",
+      "empresa": "Correos",
+      "id": 6
+    },
+    {
+      "direccion": "Chacabuco",
+      "code": "16007",
+      "destinatario": "Gaia",
+      "remitente": "Fiorella",
+      "peso": "8",
+      "precio": "40875",
+      "empresa": "Correos",
+      "id": 7
+    }
+  ],
+  "empresas": [
+    {
+      "name": "Correos",
+      "code": "46007",
+      "provincia": "Valencia",
+      "municipio": "Valencias",
+      "contacto": "+345674839130",
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+.table{
+    padding: 20px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    background-color: #6AAB9E;
+}
+
+.title{
+    margin: 0;
+}

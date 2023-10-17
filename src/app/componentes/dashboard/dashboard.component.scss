@@ -1,0 +1,27 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.fondo{
+  display: flex;
+  align-items: center;
+  background-color: #117864;
+  color: white;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin: 0;
+}
+
+.logout{
+  cursor: pointer;
+}

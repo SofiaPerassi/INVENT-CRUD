@@ -1,0 +1,37 @@
+<div class="container">
+    <div mat-dialog-title>
+        <h1>Formulario de empresa</h1>
+    </div>
+    <div mat-dialog-content class="form">
+        <form [formGroup]="empresaForm" (ngSubmit)="onSubmit()">
+            <div class="second">
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre de la empresa</mat-label>
+                    <input matInput formControlName="name" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Provincia</mat-label>
+                    <input matInput formControlName="provincia" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Municipio</mat-label>
+                    <input matInput formControlName="municipio" required>
+                </mat-form-field>
+            </div>
+            <div class="first">
+                <mat-form-field appearance="outline" class="input">
+                    <mat-label>Código postal</mat-label>
+                    <input matInput formControlName="code" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="input">
+                    <mat-label>Contacto (teléfono)</mat-label>
+                    <input matInput formControlName="contacto" required>
+                </mat-form-field>
+            </div>
+        <div mat-dialog-actions class="first">
+            <button mat-raised-button type="submit" [disabled]="empresaForm.invalid" class="button">Aceptar</button>
+            <button mat-raised-button [mat-dialog-close]="false" class="button">Cancelar</button>
+        </div>
+        </form>
+    </div>
+</div>

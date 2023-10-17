@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.first{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input{
+    width: 45%;
+}
+
+.second{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.button{
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #117864 !important;
+    color: white !important;
+}
