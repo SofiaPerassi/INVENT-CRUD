@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuarioLogin } from 'src/app/models/models';
 import { AuthService } from 'src/app/service/auth.service';
+import { MessageService } from 'src/app/service/message.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder, 
     private service: AuthService,
-    private router: Router
+    private router: Router, 
+    private message: MessageService
   ){
     this.userForm = this.fb.group(
       {
@@ -51,9 +53,12 @@ export class LoginComponent {
 
     if (this.userForm.valid) {
         this.service.login(usuario, contraseña).subscribe({
-          next: (val: any) => {
-            console.log(newUser)
+          next: (val: boolean) => {      
+            if (val === true) {
             this.router.navigate(['/dashboard']);
+            } else {
+              this.message.openSnackBar('Usuario o contraseña incorrectos', 'error');
+            }
           },
           error: (err: any) => {
             console.error(err);

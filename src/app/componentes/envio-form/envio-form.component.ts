@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Envios } from 'src/app/models/models';
 import { EnviosService } from 'src/app/service/envios.service';
+import { MessageService } from 'src/app/service/message.service';
 
 @Component({
   selector: 'app-envio-form',
@@ -21,6 +22,7 @@ export class EnvioFormComponent {
     private fb: FormBuilder, 
     private service: EnviosService,
     private dialogRef: MatDialogRef<EnvioFormComponent>,
+    private message: MessageService
   ){
     this.envioForm = this.fb.group(
       {
@@ -37,7 +39,8 @@ export class EnvioFormComponent {
   ngOnInit(): void {
   }
 
-  calculatePrecio(peso: number){
+  calculatePrecio(peso: any){
+    peso = parseFloat(peso)
     if (0 < peso && peso <= 0.1) {
       this.precio = peso * 5;
     } else if (0.1 < peso && peso <= 0.3) {
@@ -102,9 +105,8 @@ export class EnvioFormComponent {
     if (this.envioForm.valid) {
         this.service.createEnvio(newEnvio).subscribe({
           next: (val: any) => {
-            // this.message.openSnackBar('La pregunta fue creada con éxito!');
+            this.message.openSnackBar('El envío fue creado con éxito!');
             this.dialogRef.close(true);
-            console.log(newEnvio)
           },
           error: (err: any) => {
             console.error(err);

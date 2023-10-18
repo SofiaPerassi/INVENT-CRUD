@@ -1,7 +1,7 @@
 {
   "usuarios": [
     {
-      "nombre": "SofiaPerassi",
+      "nombre": "UsuarioInvent",
       "email": "sofiaperassi@outlook.com",
       "contraseña": "INVENT",
       "id": 1
@@ -48,11 +48,11 @@
     },
     {
       "direccion": "Chacabuco",
-      "code": "16007",
+      "code": "16008",
       "destinatario": "Gaia",
       "remitente": "Fiorella",
       "peso": "8",
-      "precio": "40875",
+      "precio": 123,
       "empresa": "Correos",
       "id": 7
     }

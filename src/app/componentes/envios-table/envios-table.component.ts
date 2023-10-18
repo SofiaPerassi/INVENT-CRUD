@@ -42,7 +42,6 @@ export class EnviosTableComponent {
         // this.dataSource.sort = this.sort;
         // this.dataSource.paginator = this.paginator;
       },
-      error: console.log,
     });
   }
 
@@ -63,7 +62,6 @@ export class EnviosTableComponent {
         this.message.openSnackBar('Envio borrado!', 'done');
         this.getEnviosList();
       },
-      error: console.log,
     });
   }
 }

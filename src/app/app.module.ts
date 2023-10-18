@@ -13,6 +13,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { EnviosTableComponent } from './componentes/envios-table/envios-table.component';
 import { EnvioFormComponent } from './componentes/envio-form/envio-form.component';
@@ -57,7 +58,8 @@ import { AuthGuard } from './guard/auth.guard';
     MatDialogModule, 
     MatInputModule,
     MatFormFieldModule, 
-    MatSnackBarModule
+    MatSnackBarModule, 
+    MatTooltipModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

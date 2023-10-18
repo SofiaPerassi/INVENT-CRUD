@@ -44,8 +44,7 @@ export class TransporteTableComponent {
         this.dataSource = new MatTableDataSource(res);
         // this.dataSource.sort = this.sort;
         // this.dataSource.paginator = this.paginator;
-      },
-      error: console.log,
+      }
     });
   }
 
@@ -68,8 +67,7 @@ export class TransporteTableComponent {
       next: (res) => {
         this.message.openSnackBar('Empresa borrada!', 'done');
         this.getEmpresasList();
-      },
-      error: console.log,
+      }
     });
   }
 }

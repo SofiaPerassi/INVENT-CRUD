@@ -69,7 +69,6 @@ export class EmpresaFormComponent {
 
     if (this.empresaForm.valid) {
       if(this.data){
-        console.log(this.data)
         this.service
         .editEmpresa(this.data.id, newEmpresa)
         .subscribe({
@@ -87,7 +86,6 @@ export class EmpresaFormComponent {
           next: (val: any) => {
             this.message.openSnackBar('La empresa fue creada con éxito!');
             this.dialogRef.close(true);
-            console.log(newEmpresa)
           },
           error: (err: any) => {
             console.error(err);
