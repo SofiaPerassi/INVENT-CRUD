@@ -1,35 +1,25 @@
 # INVENTCrud
 
+INVENT es una aplicación web que permite a quien lo utiliza administrar y visualizar tanto envíos como empresas de transporte. Una vez que se loguea, puede acceder al home screen, donde se encuentran las distintas tablas, estas incluyen: tabla los pesos y tipos de paquete, tabla de trabajadores/administradores, tabla de envios realizados y tabla de empresas de transporte. Para estas ultimas dos tablas, se pueden crear tanto envíos como empresas y tambien eliminarlos de ser necesarios. Las empresas transportistas, a su vez, también pueden ser editadas. Una vez que el usuario terminó de realizar y visualizar lo deseado, puede cerrar sesión sin inconvenientes. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
-## Dependencies
+## Dependencias y deployado
 
-Go to the Innotest folder and open the console. Run command  `npm install` to install all dependencies.
+Para poder levantar la aplicación de manera local se requiere realizar los siguientes pasos:
+
+Descargar las dependencias corriendo en la carpeta raíz:
+
+npm install
+
+Adicionalmente, si no se posee angular previamente instalado, se debe realizar: 
+
+npm i -g @angular/cli
 
 ## Json server
 
-Go to src/assets/data and run `npx json-server --watch db.json` to start the mock api. 
+Para inicializar la base de datos local, se debe buscar la carpeta src/assets/data y correr `npx json-server --watch db.json`. 
 
 ## Development server
 
-Inside the innotest folder, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Dentro de la carpeta principal INVENT-crud, se debe correr ng serve -o para que automaticamente abra la pagina web en una nueva pestaña. Adicionalmente, se puede correr solo ng-serve y abrir manualmente la web en http://localhost:4200/
