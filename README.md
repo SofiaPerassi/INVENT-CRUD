@@ -23,3 +23,7 @@ Para inicializar la base de datos local, se debe buscar la carpeta src/assets/da
 ## Development server
 
 Dentro de la carpeta principal INVENT-crud, se debe correr ng serve -o para que automaticamente abra la pagina web en una nueva pestaña. Adicionalmente, se puede correr solo ng-serve y abrir manualmente la web en http://localhost:4200/
+
+## Usuario autorizado para ingresar
+
+El usuario autorizado para logearse es UsuarioInvent con contraseña INVENT. Este se puede ver en el archivo db.json en el array usuarios.
